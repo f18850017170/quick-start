@@ -1,7 +1,6 @@
 package com.vonfly.config;
 
 import org.apache.commons.dbcp.BasicDataSource;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
@@ -31,14 +30,12 @@ public class DataSourceConfig {
         return source;
     }
 
-    @Autowired
     @Bean
     public DataSourceTransactionManager dataSourceTransactionManager(DataSource dataSource) {
         return new DataSourceTransactionManager(dataSource);
     }
 
     @Bean
-    @Autowired
     public JdbcOperations jdbcOperations(DataSource dataSource) {
         return new JdbcTemplate(dataSource);
     }
