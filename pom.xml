@@ -26,9 +26,37 @@
         <commons-dbcp.version>1.4</commons-dbcp.version>
         <mysql.connector.version>5.1.26</mysql.connector.version>
         <spymemcached.version>2.12.3</spymemcached.version>
+        <redis.client.version>2.9.0</redis.client.version>
+        <spring-redis.version>1.8.4.RELEASE</spring-redis.version>
+        <jackson.version>2.9.2</jackson.version>
     </properties>
 
     <dependencies>
+        <dependency>
+            <groupId>com.fasterxml.jackson.core</groupId>
+            <artifactId>jackson-databind</artifactId>
+            <version>${jackson.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>redis.clients</groupId>
+            <artifactId>jedis</artifactId>
+            <version>${redis.client.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>org.springframework.data</groupId>
+            <artifactId>spring-data-redis</artifactId>
+            <version>${spring-redis.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>org.springframework</groupId>
+            <artifactId>spring-aop</artifactId>
+            <version>${spring.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>org.springframework</groupId>
+            <artifactId>spring-aspects</artifactId>
+            <version>${spring.version}</version>
+        </dependency>
         <dependency>
             <groupId>net.spy</groupId>
             <artifactId>spymemcached</artifactId>
